@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  padding: 0 auto;
   font-family: "Roboto", sans-serif;
 }
 
@@ -10,11 +10,11 @@ header {
   box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
 }
 
-.mainpage {
+h2 {
   max-width: 1280px;
-  margin: auto;
+    margin: auto;
+    margin-bottom: 2rem;
 }
-
 /* LIEU + BOUTON RESERVATION */
 .lieu {
   background: #f3f3f3;
@@ -28,11 +28,7 @@ header {
 .reservation {
   text-align: center;
   background: #fafafa;
-  padding: 1rem;
-}
-
-.reservation h2 {
-  margin-top: 0;
+  padding: 2rem;
 }
 
 .reservation a {
@@ -65,7 +61,10 @@ header {
 /* FONCTIONNEMENT */
 
 .fonctionnement {
-  border: 1px solid red;
+  margin: auto;
+  max-width: 1280px;
+  margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 .fonctionnement-items {
@@ -73,7 +72,6 @@ header {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   gap: 2rem;
-  margin-bottom: 2rem;
   counter-reset: steps;
 }
 
@@ -89,6 +87,7 @@ header {
 .fonctionnement-items i {
   color: #7e7e7e;
   margin-right: 1rem;
+  margin-left: 0.4rem;
 }
 
 .fonctionnement-items li::before {
@@ -102,4 +101,91 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  left: -0.7rem;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* RESTAURANTS */
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem;
+}
+
+.restaurants-items {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.restaurants-items a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: white;
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+
+.card {
+  position: relative;
+}
+.card::before {
+  content: "Nouveau";
+  position: absolute;
+  padding: 0.35rem 0.75rem;
+  right: 2rem;
+  top: 2rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  margin: auto;
+}
+
+.card-desc {
+  padding: 0rem 1rem;
+  line-height: 0.5rem;
+  position: relative;
+}
+
+.card img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card-desc .nohoverheart {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  right: 1rem;
+}
+
+.card-desc .nohoverheart:hover {
+  opacity: 0;
+  transition-duration: 0ms;
+}
+
+.card-desc .hoverheart {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  right: 1rem;
+  opacity: 0;
+}
+
+.card-desc .hoverheart:hover {
+  opacity: 1;
+	background: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  transition-duration: .20s;
+  transition-timing-function: ease;
 }

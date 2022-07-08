@@ -7,7 +7,7 @@ body {
 header {
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
 }
 
 h2 {
@@ -15,7 +15,6 @@ h2 {
   margin: auto;
   margin-bottom: 2rem;
 }
-
 /* LIEU + BOUTON RESERVATION */
 .lieu {
   background: #f3f3f3;
@@ -37,7 +36,6 @@ h2 {
   color: white;
   font-weight: 600;
 }
-
 .reservation button {
   border: 0;
   padding: 0.75rem 1.5rem;
@@ -45,18 +43,23 @@ h2 {
   font-size: 1.1rem;
   border-radius: 2rem;
   background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-image: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 0.9),
+    rgba(255, 121, 218, 0.9)
+  );
   cursor: pointer;
   transition-duration: 0.25s;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
 }
 
 .reservation button:hover {
   background-color: #fff;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
 }
 
 /* FONCTIONNEMENT */
+
 .fonctionnement {
   margin: auto;
   max-width: 1280px;
@@ -76,7 +79,7 @@ h2 {
   padding: 1.2rem;
   border-radius: 1rem;
   background-color: #f6f6f6;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
   position: relative;
 }
 
@@ -104,6 +107,7 @@ h2 {
 }
 
 /* RESTAURANTS CONTAINER */
+
 .restaurants {
   background-color: #f6f6f6;
   padding: 2rem;
@@ -127,13 +131,14 @@ h2 {
 }
 
 /* CARD RESTAURANTS */
+
 .card {
   position: relative;
   transition-duration: 0.25s;
 }
 
 .card:hover {
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
 }
 
 #new::before {
@@ -192,6 +197,7 @@ h2 {
 }
 
 /* FOOTER */
+
 footer {
   background: #353535;
   padding: 1rem;
@@ -237,13 +243,12 @@ footer i {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: hsla(0deg, 0%, 100%, 0.9);
+  background-color: hsla(0, 0%, 100%, 0.9);
   animation: loader 0.01s;
   animation-delay: 2s;
   animation-fill-mode: both;
   z-index: 10000;
 }
-
 div.spinner {
   position: relative;
   width: 150px;
@@ -261,12 +266,16 @@ div.spinner {
 div.spinner div {
   width: 6%;
   height: 16%;
-  background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 0.9),
+    rgba(255, 121, 218, 0.9)
+  );
   position: absolute;
   left: 49%;
   top: 43%;
   opacity: 0;
-  border-radius: 50px;
+    border-radius: 50px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   animation: fade 1s linear infinite;
 }
@@ -279,12 +288,14 @@ div.spinner div {
     opacity: 0.25;
   }
 }
+
 @keyframes loader {
   100% {
     opacity: 0;
     z-index: -100;
   }
 }
+
 div.spinner div.bar1 {
   transform: rotate(0deg) translate(0, -130%);
   animation-delay: 0s;
@@ -299,50 +310,40 @@ div.spinner div.bar3 {
   transform: rotate(60deg) translate(0, -130%);
   animation-delay: -0.833s;
 }
-
 div.spinner div.bar4 {
   transform: rotate(90deg) translate(0, -130%);
   animation-delay: -0.7497s;
 }
-
 div.spinner div.bar5 {
   transform: rotate(120deg) translate(0, -130%);
   animation-delay: -0.667s;
 }
-
 div.spinner div.bar6 {
   transform: rotate(150deg) translate(0, -130%);
   animation-delay: -0.5837s;
 }
-
 div.spinner div.bar7 {
   transform: rotate(180deg) translate(0, -130%);
   animation-delay: -0.5s;
 }
-
 div.spinner div.bar8 {
   transform: rotate(210deg) translate(0, -130%);
   animation-delay: -0.4167s;
 }
-
 div.spinner div.bar9 {
   transform: rotate(240deg) translate(0, -130%);
   animation-delay: -0.333s;
 }
-
 div.spinner div.bar10 {
   transform: rotate(270deg) translate(0, -130%);
   animation-delay: -0.2497s;
 }
-
 div.spinner div.bar11 {
   transform: rotate(300deg) translate(0, -130%);
   animation-delay: -0.167s;
 }
-
 div.spinner div.bar12 {
   transform: rotate(330deg) translate(0, -130%);
   animation-delay: -0.0833s;
 }
 
-/*# sourceMappingURL=style.css.map */

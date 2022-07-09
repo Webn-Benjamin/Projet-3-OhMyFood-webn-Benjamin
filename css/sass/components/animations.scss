@@ -1,0 +1,12 @@
+@mixin rotatemenu {
+  animation: 0.7s ease;
+  animation-name: rotatemenu;
+  @keyframes rotatemenu {
+    0% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+}

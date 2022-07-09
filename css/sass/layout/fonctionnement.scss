@@ -1,0 +1,45 @@
+.fonctionnement {
+  margin: auto;
+  max-width: 1280px;
+  padding: 2rem;
+
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    counter-reset: steps;
+
+    & li {
+      list-style-type: none;
+      padding: 1.2rem;
+      border-radius: 1rem;
+      background-color: #f6f6f6;
+      box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+      position: relative;
+    }
+
+    & i {
+      color: #7e7e7e;
+      margin-right: 1rem;
+      margin-left: 0.4rem;
+    }
+
+    & li::before {
+      content: "" counter(steps);
+      counter-increment: steps;
+      background-color: #9356dc;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 50%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: -0.7rem;
+      color: white;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

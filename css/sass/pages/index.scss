@@ -1,0 +1,91 @@
+@import "../base/police.scss";
+@import "../base/reset.scss";
+@import "../layout/header.scss";
+@import "../layout/lieu.scss";
+@import "../layout/fonctionnement.scss";
+@import "../layout/reservation.scss";
+@import "../components/loader.scss";
+@import "../layout/footer.scss";
+
+/* RESTAURANTS CONTAINER */
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem;
+
+  &-items {
+    max-width: 1280px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  &-items a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border-radius: 1rem 1rem 1rem 1rem;
+  }
+}
+/* CARD RESTAURANTS */
+.card {
+  position: relative;
+  transition-duration: 0.25s;
+
+  &:hover {
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
+  }
+
+  &#new::before {
+    content: "Nouveau";
+    position: absolute;
+    padding: 0.35rem 0.75rem;
+    right: 2rem;
+    top: 2rem;
+    background-color: #99e2d0;
+    color: #1b6150;
+    margin: auto;
+  }
+
+  &-desc {
+    padding: 0rem 1rem;
+    line-height: 0.5rem;
+    position: relative;
+  }
+
+  & img {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+  }
+  &-desc .nohoverheart {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    right: 1rem;
+    &:hover {
+      opacity: 0;
+    }
+  }
+  &-desc .hoverheart {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    right: 1rem;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      background-clip: border-box;
+      background: linear-gradient(to bottom left, #9356dc, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition-duration: 0.2s;
+      transition-timing-function: ease;
+    }
+  }
+}

@@ -3,6 +3,7 @@
 @import "../base/reset.scss";
 @import "../components/buttons.scss";
 @import "../layout/footer.scss";
+@import "../sass-utils/variables.scss";
 
 .header_img {
   max-height: 32rem;
@@ -60,15 +61,21 @@
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
-      max-width: 400px;
+      overflow: hidden;
+      padding: 0 0.5rem 0.5rem 0;
     }
     &-items {
+      box-shadow: $box-shadow;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
       background: white;
       border-radius: 0.6rem;
       overflow: hidden;
+      animation: ItemsAppear 1s;
+      animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+      transform: scale(0);
+      animation-fill-mode: both;
       &:hover {
         .menu-confirm {
           margin-right: 0;
@@ -78,6 +85,12 @@
         }
       }
     }
+@for $i from 0 to 11 {
+  .delay-#{$i} {
+    animation-delay:  .15s*$i;
+  }
+}
+
     & h3 {
       margin: 0;
       margin-bottom: 1rem;
@@ -104,21 +117,21 @@
     &-desc {
       display: flex;
       flex-direction: column;
-      flex-basis: 100%;
+      flex: 1;
       padding: 1rem;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     &-price {
       display: flex;
-      padding: 1rem;
+      padding: 1rem 1rem;
       font-weight: bold;
     }
     &-confirm {
       background: #99e2d0;
       color: #99e2d0;
       height: 4.4rem;
-      width: 6.4rem;
+      width: 5rem;
       align-items: center;
       display: flex;
       justify-content: center;
@@ -140,6 +153,5 @@
     margin: auto;
     display: flex;
     @include buttongradient;
-
   }
 }

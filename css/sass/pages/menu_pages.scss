@@ -1,0 +1,157 @@
+@import "../components/animations.scss";
+@import "../base/police.scss";
+@import "../base/reset.scss";
+@import "../components/buttons.scss";
+@import "../layout/footer.scss";
+@import "../sass-utils/variables.scss";
+
+.header_img {
+  max-height: 32rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.container-menu {
+  background: #f6f6f6;
+  padding: 2rem 1rem 4rem;
+  max-width: 1280px;
+  margin: auto;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -5rem;
+  z-index: 1;
+  position: relative;
+  & h2 {
+    font-family: "Shrikhand", cursive;
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    position: relative;
+    & .nohoverheart {
+      position: absolute;
+      font-size: 2rem;
+      right: 1rem;
+      &:hover {
+        opacity: 0;
+      }
+    }
+    & .hoverheart {
+      position: absolute;
+      font-size: 2rem;
+      right: 1rem;
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+        background-clip: border-box;
+        background: linear-gradient(to bottom left, #9356dc, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition-duration: 0.2s;
+        transition-timing-function: ease;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+    &-column {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      overflow: hidden;
+      padding: 0 0.5rem 0.5rem 0;
+    }
+    &-items {
+      box-shadow: $box-shadow;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      background: white;
+      border-radius: 0.6rem;
+      overflow: hidden;
+      animation: ItemsAppear 1s;
+      animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+      transform: scale(0);
+      animation-fill-mode: both;
+      &:hover {
+        .menu-confirm {
+          margin-right: 0;
+        }
+        & i {
+          @include rotatemenu;
+        }
+      }
+    }
+@for $i from 0 to 11 {
+  .delay-#{$i} {
+    animation-delay:  .15s*$i;
+  }
+}
+
+    & h3 {
+      margin: 0;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      position: relative;
+      padding-bottom: 0.5rem;
+      &::after {
+        content: "";
+        width: 3rem;
+        height: 0.25rem;
+        background: #99e2d0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+    & p {
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &-desc {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &-price {
+      display: flex;
+      padding: 1rem 1rem;
+      font-weight: bold;
+    }
+    &-confirm {
+      background: #99e2d0;
+      color: #99e2d0;
+      height: 4.4rem;
+      width: 5rem;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-radius: 0 0.6rem 0.6rem 0;
+      margin-right: -5rem;
+      transition: all 0.5s;
+    }
+    & .icon-round {
+      height: 1.6rem;
+      width: 1.6rem;
+      border-radius: 100%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  & button {
+    margin: auto;
+    display: flex;
+    @include buttongradient;
+  }
+}

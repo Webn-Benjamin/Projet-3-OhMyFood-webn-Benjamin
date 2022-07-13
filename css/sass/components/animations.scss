@@ -1,3 +1,14 @@
+// Items Appear
+@keyframes ItemsAppear {
+  0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// rotation Confirmation Menu
 @mixin rotatemenu {
   animation: 0.7s ease;
   animation-name: rotatemenu;

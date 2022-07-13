@@ -1,0 +1,20 @@
+// MEDIA SCREEN //
+@media screen and (max-width: 1100px) {
+  //INDEX
+  .fonctionnement-items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+  .restaurants-items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  // MENU PAGE
+  .container-menu .menu {
+    grid-template-columns: repeat(1, 1fr) !important;
+  &-confirm {
+    margin-right: -5rem;
+  }
+  }
+}
